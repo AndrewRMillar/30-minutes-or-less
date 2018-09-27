@@ -1,0 +1,26 @@
+Planning tot de deadline van 12u
+Afwezig in de nacht:
+- Anna
+- Andrew
+- Erwin
+Doing
+- Pagina zoekresultaten
+- Pagina studenten contract skelet
+- Pagina student kamer detail skelet
+- Geraamte
+- Pagina aanbieder overzicht skelet
+- Pagina aanmelden/inlog skelet
+- Pagina aanbieder aanpassen
+- Pagina aanbieder toevoegen skelet
+To Do
+- Opslagplek kiezen
+- Invulling voor footer
+- Header vulling foto’s
+- JS scroll to top
+- Studentpagina zoekresultaten
+Afhebben vannacht
+- Landingspagina
+- Studentendeel prioriteit!
+
+
+
