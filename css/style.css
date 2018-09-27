@@ -7,6 +7,14 @@ section#service {
     box-shadow: 0 20.213px 30px 0px rgba(158, 158, 158, 0.3);
 }
 
+.modal-content {
+    padding: 2em;
+}
+.modal-footer {
+    border: none;
+    justify-content: space-around;
+}
+
 .single-service {
     background-color: #f3f1f1d6;
 }
@@ -24,7 +32,9 @@ section#service {
 	display: block;
 }
 
-.foto{
+.foto{ 
+    border-radius: 8px;
+    margin: 5px 5px 5px 5px;
 }
 
 .tumb250px {
