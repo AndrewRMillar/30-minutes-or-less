@@ -1,4 +1,5 @@
 <?php
+    // connectie maken met database op host van Erwin
     $servername = "localhost";
     $username = "deb25567_30orless";
     $password = "Jq8xWRVLi";
