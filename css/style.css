@@ -14,6 +14,12 @@ section#service {
     border: none;
     justify-content: space-around;
 }
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 20% auto;
+    }
+}
 
 .single-service {
     background-color: #f3f1f1d6;
@@ -41,4 +47,9 @@ section#service {
     width:250px !important;
     height:250px !important;
     object-fit: cover;
+}
+
+.search-field .app-select {
+    margin-top: 50px;
+    margin-bottom: 0;
 }
