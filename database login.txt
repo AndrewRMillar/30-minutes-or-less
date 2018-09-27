@@ -1,0 +1,10 @@
+Database Created
+
+Details
+
+Your database has been setup. Use the following values:
+
+Database:	deb25567_30orless
+Host:	localhost
+Username:	deb25567_30orless
+Password:	Jq8xWRVLi
