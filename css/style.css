@@ -20,3 +20,9 @@ section#service {
 .single-service:hover h4 {
     color: #222222;
 }
+.no-flex{
+	display: block;
+}
+
+.foto{
+}

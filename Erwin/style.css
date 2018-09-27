@@ -1,0 +1,6 @@
+/* Onze stijl */
+.tumb250px {
+    width:250px !important;
+    height:250px !important;
+    object-fit: cover;
+}
