@@ -11,5 +11,12 @@ $(window).on('load',function(){
         });
     });
 
+    document.querySelector(".mt-50").addEventListener("click", (e) => {
+        e.preventDefault();
+        let range = e.target.closest("form").querySelector("#range").value;
+        let travelTime = e.target.closest("form").querySelector(".app-select").value;
+        console.log(range, travelTime);
+    })
+
     $('#userSelect').modal('show');
 });
