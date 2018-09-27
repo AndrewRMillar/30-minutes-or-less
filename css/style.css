@@ -1,1 +1,22 @@
 /* Onze stijl */
+
+section#service {
+    padding-top: 5em;
+}
+.default-header{
+    box-shadow: 0 20.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.single-service {
+    background-color: #f3f1f1d6;
+}
+.single-service:hover {
+    box-shadow: none;
+    cursor: initial;
+    color: inherit;
+    background-image: none;
+    background-color: #f3f3f3;
+}
+.single-service:hover h4 {
+    color: #222222;
+}
