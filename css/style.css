@@ -32,5 +32,13 @@ section#service {
 	display: block;
 }
 
-.foto{
+.foto{ 
+    border-radius: 8px;
+    margin: 5px 5px 5px 5px;
+}
+
+.tumb250px {
+    width:250px !important;
+    height:250px !important;
+    object-fit: cover;
 }
