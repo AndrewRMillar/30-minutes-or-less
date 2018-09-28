@@ -105,19 +105,7 @@
 
 
 			<!-- start footer Area -->		
-						<!-- start footer Area -->		
-						<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						
-						</div>						
-							
-					</div>
-					<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-
-					</div>
-				</div>
-			</footer>	
+			<?php include 'php/footer.php';?>
 			<!-- End footer Area -->		
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
