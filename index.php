@@ -14,7 +14,7 @@
 			<!-- meta character set -->
 			<meta charset="UTF-8">
 			<!-- Site Title -->
-			<title>Real Estate</title>
+			<title>30 Or Less</title>
 
 			<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<link rel="stylesheet" href="css/linearicons.css">	
@@ -148,21 +148,8 @@
 			</div>
 			</section> 
 			
-
-
 			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						
-						</div>						
-							
-					</div>
-					<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-
-					</div>
-				</div>
-			</footer>	
+			<?php include 'php/footer.php';?>
 			<!-- End footer Area -->		
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

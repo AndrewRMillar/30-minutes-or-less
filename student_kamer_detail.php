@@ -14,7 +14,7 @@
 			<!-- meta character set -->
 			<meta charset="UTF-8">
 			<!-- Site Title -->
-			<title>Unit Details</title>
+			<title>30 Or Less Unit Details</title>
 
 			<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<link rel="stylesheet" href="css/linearicons.css">=
@@ -34,8 +34,6 @@
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
-
-
 
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
@@ -69,26 +67,17 @@
     // als er resultaten zijn dan resultaat in een associtievee array zetten
 
     if ($result->num_rows > 0) {
-        
         while($row = $result->fetch_assoc()) 
         {
 
             // rows naar variabelen vertalen
-            
             $aanbodID = htmlspecialchars($row['ID']);
-                    
             $titel = htmlspecialchars($row['titel']);
-            
             $reistijd = htmlspecialchars($row['reistijd']);
-            
             $frequentie = htmlspecialchars($row['frequentie']);
-
             $oppervlakte = htmlspecialchars($row['oppervlakte']);
-            
             $voorzieningen = htmlspecialchars($row['voorzieningen']);
-
             $verhuurder = htmlspecialchars($row['verhuurder']);
-
             $plaatsnaam = htmlspecialchars($row['plaatsnaam']);
 			
 			$imgpath = "./img/aanbod/" . $aanbodID . "/";
