@@ -29,41 +29,8 @@
 		<body>
 
 			<!-- Start Header Area -->
-			<header class="default-header">
-				<!-- <div class="menutop-wrap">
-					<div class="menu-top container">
-						<div class="d-flex justify-content-end align-items-center">
-							<ul class="list">
-								<li><a href="tel:+12312-3-1209">+12312-3-1209</a></li>
-								<li><a href="#">Sell / Rent Property</a></li>
-								<li><a href="#">login / register</a></li>
-							</ul>
-						</div>
-					</div>					
-				</div> -->
+			<?php include 'php/menu.php';?>
 
-				<nav class="navbar navbar-expand-lg  navbar-light bg-light">
-					<div class="container">
-						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="">
-						  </a>
-						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="navbar-toggler-icon"></span>
-						  </button>
-
-						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-								<li><a href="#home">Home</a></li>
-								<li><a href="#service">Service</a></li>
-								<li><a href="#property">Property</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-						    </ul>
-						  </div>						
-					</div>
-				</nav>
-			</header>
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
@@ -101,6 +68,75 @@
 							<button class="buttonreact">React</button>
 					</div>
 				</div>
+				<?php
+    // aanbod ophalen
+
+    // connectie maken
+    require 'db_connect.php';
+
+	// sql query
+	$aanbodID = htmlspecialchars($_GET["id"]);
+    $sql = "SELECT * FROM aanbod WHERE ID = $id";
+    $result = $conn->query($sql);           
+
+    // als er resultaten zijn dan resultaat in een associtievee array zetten
+
+    if ($result->num_rows > 0) {
+        
+        while($row = $result->fetch_assoc()) 
+        {
+            $currentstatus = $row['status'];
+
+            // rows naar variabelen vertalen
+            
+            $aanbodID = htmlspecialchars($row['ID']);
+                    
+            $titel = htmlspecialchars($row['titel']);
+            
+            $reistijd = htmlspecialchars($row['reistijd']);
+            
+            $frequentie = htmlspecialchars($row['frequentie']);
+
+            $oppervlakte = htmlspecialchars($row['oppervlakte']);
+            
+            $voorzieningen = htmlspecialchars($row['voorzieningen']);
+
+            $verhuurder = htmlspecialchars($row['verhuurder']);
+
+            $plaatsnaam = htmlspecialchars($row['plaatsnaam']);
+            
+
+			$imgpath = "./img/aanbod/tumb/" . $aanbodID . "/";
+
+
+                    if ($dir = opendir($imgpath)) {
+
+                        while (false !== ($image = readdir($dir))) {
+
+                            if ($image != "." && $image != "..") {
+
+						
+
+								echo "<div class=\"row my-3 bg-light\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . " minuten tot de RUG</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul></div><div class=\"column mx-3\"><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
+
+
+
+                            }
+                         }
+            
+                closedir($dir);
+                    }
+        }
+            
+    }
+
+
+    else {
+		echo "<h2 class=\"display-4\">Geen to-do items gevonden</h2>";
+		
+    }
+?>
+
 
 			</section>
 
@@ -434,76 +470,15 @@
 			<!-- End Contact Area -->	
 
 			<!-- start footer Area -->		
-			<footer class="footer-area clearfix section-gap">
+			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>About Us</h6>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-
-										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-
-										<div class="d-flex flex-row">
-
-											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-				                            	<div style="position: absolute; left: -5000px;">
-													<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-												</div>
-				                          	
-											<!-- <div class="col-lg-4 col-md-4">
-												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-											</div>  -->
-										</div>		
-										<div class="info"></div>
-										</form>
-								</div>
-								</div>
+						
 						</div>						
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget mail-chimp">
-								<h6 class="mb-20">Instragram Feed</h6>
-								<ul class="instafeed d-flex flex-wrap">
-									<li><img src="img/i1.jpg" alt=""></li>
-									<li><img src="img/i2.jpg" alt=""></li>
-									<li><img src="img/i3.jpg" alt=""></li>
-									<li><img src="img/i4.jpg" alt=""></li>
-									<li><img src="img/i5.jpg" alt=""></li>
-									<li><img src="img/i6.jpg" alt=""></li>
-									<li><img src="img/i7.jpg" alt=""></li>
-									<li><img src="img/i8.jpg" alt=""></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
+							
 					</div>
 					<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<p class="footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
 					</div>
 				</div>
 			</footer>	

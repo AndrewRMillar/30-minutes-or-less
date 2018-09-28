@@ -67,7 +67,7 @@
 									    </div>	
 									    <div class="col-lg-6 d-flex justify-content-end">
 											<!-- dit is bewust niet werkend gemaakt ivm tijd. Hij verwijst nu naar de pagina met een link ipv echt iets door te sturen -->
-											<a class="btn btn-primary" href="student_zoek_resultaat.php" role="button">Search</a>
+											<a class="btn btn-primary" href="student_kamer_detail.php?id=2" role="button">Search</a>
 										</div>						  
 									  </div>
 							  	</form>
