@@ -86,23 +86,40 @@
 							<button class="buttonbck">Back</button>
 						<h1>Contact form</h1>
 
-						<form class="form-inline">
-							<label for="name">Name</label>
-							<input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
-							<small id="emailHelp" class="form-text text-muted"></small>
-							<label for="exampleInputEmail1">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						<form>
+							<div class="form-row align-items-center">
+								<div class="col-sm-6 my-1">
+									<label class="sr-only" for="inlineFormInputName">Name</label>
+									<input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+								</div>
+								<div class="col-sm-6 my-1">
+									<label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+									</div>
+								</div>
+								<div class="col-auto my-1">
+									<label for="exampleFormControlTextarea1" class="sr-only">Example textarea</label>
+									<textarea id="exampleFormControlTextarea1" rows="5" cols="50"></textarea>
+									<!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+								</div>
+								<button class="buttonreact">Send</button>
+							</div>
+						</form>
+						<!-- <form>
+							<div class="col-sm-6 my-1">
+								<label for="name" class="sr-only">Name</label>
+								<input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+							</div>
+							<div class="col-sm-6 my-1">
+								<label for="exampleInputEmail1" class="sr-only">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							</div>
 							<div class="custom-control">
 							</div>
-							<div class="form-group">
-								<label for="exampleFormControlTextarea1">Example textarea</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>
 
-						</form>
+						</form> -->
 						
-							<button class="buttonreact">Send</button>
 					</div>
 				</div>
 

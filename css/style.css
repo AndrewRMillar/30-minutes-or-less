@@ -107,7 +107,7 @@ background-color: var(--hoofdkleur);
     object-fit: cover;
 }
 
-.contact #home h1{
+h1.only-h1{
     padding: 2em;
 }
 
@@ -122,4 +122,12 @@ background-color: var(--hoofdkleur);
 
 footer {
     clear: both;
+}
+
+.contact textarea {
+    border-radius: 3px
+}
+
+.contact #service {
+    padding-bottom: 4em;
 }
