@@ -84,24 +84,27 @@
 				<div class="container">
 					<div class="row no-flex">
 							<button class="buttonbck">Back</button>
-						<h1>13min, Hoogezand</h1>
-						<p class="infotext"> 
-							<ul>
-							<li>Traveling time 13min</li>
-							<li>Price 400,-</li>
-							<li>Square meters 39m2</li>
-							<li>Place Hoogezand</li>
-
-						</ul>
-					</p>
-						<img class="tumb250px foto" src="img/sk1.jpg">
-						<img class="tumb250px foto" src="img/sk2.jpg">
-						<img class="tumb250px foto" src="img/sk3.jpg">
-						<img class="tumb250px foto" src="img/sk4.jpg">
-							<button class="buttonreact">React</button>
+						<h1>My houses for rent</h1>
+				
+				<div class="row my-3">
+  					<div class="column"><img class="tumb250px foto" src="img/sk1.jpg"></div>
+  					<div class="column mx-3"><p class="apprtmntinfo"> hier komt info over het apartement</p></div>
+ 					<div class="column mx-3"><button class="buttonreact">details</button><button class="buttonreact">verwijderen</button></div>
+				</div>
+				<div class="row my-3">
+  					<div class="column"><img class="tumb250px foto" src="img/sk2.jpg"></div>
+  					<div class="column mx-3"><p class="apprtmntinfo"> hier komt info over het apartement</p></div>
+ 					<div class="column mx-3"><button class="buttonreact">details</button><button class="buttonreact">verwijderen</button></div>
+				</div>						
+				<div class="row my-3">
+  					<div class="column"><img class="tumb250px foto" src="img/sk3.jpg"></div>
+  					<div class="column mx-3"><p class="apprtmntinfo"> hier komt info over het apartement</p></div>
+ 					<div class="column mx-3"><button class="buttonreact">details</button><button class="buttonreact">verwijderen</button></div>
+				</div>
+					</div>
+							<button class="buttonreact">Add housing space</button>
 					</div>
 				</div>
-
 			</section>
 
 			<!-- End banner Area -->
