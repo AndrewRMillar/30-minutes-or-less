@@ -9,15 +9,6 @@
 								</p>
 							</div>
 						</div>
-						<!-- <div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-                            </div>
-						</div>						
-						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget mail-chimp">
-							</div>
-						</div> -->
-						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h6>Follow Us</h6>
 								<p>Let us be social</p>
