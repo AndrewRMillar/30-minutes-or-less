@@ -38,7 +38,7 @@
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
-					<div class="row fullscreen align-items-center justify-content-center" style="height: 915px;">
+					<div class="row fullscreen align-items-center justify-content-center">
 						<div class="banner-content col-lg-12 col-md-12">
 							<h1 class="text-uppercase">
 								30 minutes or less
