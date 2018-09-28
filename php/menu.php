@@ -10,7 +10,7 @@
 
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav">
-								<li><a href="#">Rooms</a></li>
+								<li><a href="#">30orLess</a></li>
 								<li><a href="#">Profile</a></li>
 								<li><a href="#">About</a></li>
 								<li><a href="#">Logout</a></li>
