@@ -42,7 +42,7 @@ section#service {
 .no-flex{
 	display: block;
 }
-.buttonbck{
+.buttonbck {
 	background-color: var(--hoofdkleur);
 	margin: 10px 10px;
     border: none;
@@ -56,14 +56,14 @@ section#service {
 
 }
 
-.foto{ 
+.foto { 
     border-radius: 8px;
     margin: 5px 5px 5px 5px;
 }
-.clearfix{
+.clearfix {
 	clear: both;
 }
-.buttonreact{
+.buttonreact {
 background-color: var(--hoofdkleur);
 	margin: 10px 10px;
 	float:  right;
@@ -76,7 +76,7 @@ background-color: var(--hoofdkleur);
     display: inline-block;
     font-size: 16px;
 }
-.loginreg{
+.loginreg {
 	background-color: var(--hoofdkleur);
 	margin: 10px 10px;
 	float: center;
@@ -92,10 +92,10 @@ background-color: var(--hoofdkleur);
 .column {
     float: left;
 }
-.left{
+.left {
     width: 25%;
 }
-.right{
+.right {
 	width: 25%;	
 }
 .middle {
@@ -110,4 +110,8 @@ background-color: var(--hoofdkleur);
 .search-field .app-select {
     margin-top: 50px;
     margin-bottom: 0;
+}
+
+.navbar-brand img {
+    height: 30px;
 }
