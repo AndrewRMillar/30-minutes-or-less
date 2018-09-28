@@ -175,7 +175,16 @@
 						<div class="col-md-8 pb-40 header-text">
 							<h1>30 or Less</h1>
 							<p>
-								hier omschrijving van 30 or less.
+								30 Or Less is a student housing mediator, 
+								aiming to facilitate living space for international students who attend college in the lovely city of Groningen.<br>
+								<br>
+								We provide a wide choice of student housing located around Groningen city, 
+								with a travel time of 30 minutes or less.<br>
+								Availability and afforability are our big advantages.<br>
+								<br>
+								For students who are not yet familiar with the area,<br> 
+								we provide a way of finding a place to live that holds up to the standards you are looking for, when arriving in another country.<br>
+
 							</p>
 						</div>
 					</div>
