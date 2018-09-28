@@ -50,6 +50,11 @@
 				</div>
 			</section>
 
+
+<section class="service-area section-gap" id="service">
+<div class="container">
+<div class="row no-flex">
+<a class="btn btn-primary" href="student_zoek_resultaat.php" role="button">Back</a>
 <?php
     // aanbod ophalen
 
@@ -59,9 +64,6 @@
 	// sql query
 	$aanbodID = htmlspecialchars($_GET["id"]);
 	$sql = "SELECT * FROM aanbod WHERE ID = $aanbodID";
-	echo $sql;
-	echo "<br>";
-	echo $aanbodID;
     $result = $conn->query($sql);           
 
     // als er resultaten zijn dan resultaat in een associtievee array zetten
@@ -70,7 +72,6 @@
         
         while($row = $result->fetch_assoc()) 
         {
-            $currentstatus = $row['status'];
 
             // rows naar variabelen vertalen
             
@@ -92,18 +93,37 @@
 			
 			$imgpath = "./img/aanbod/" . $aanbodID . "/";
 
+
+			echo "<h1>" . $reistijd . "min, " . $plaatsnaam . "</h1>";
+			echo "<p class=\"infotext\">";
+			echo "<ul>";
+			echo "<li>" . $titel . "</li>";
+			echo "<li>Travel time " . $reistijd . " min</li>";
+			echo "<li>Travel requency " . $frequentie . " time per hour</li>";
+			echo "<li>Surface area " . $oppervlakte . " m2</li>";
+			echo "<li>voorzieningen " . $voorzieningen . "</li>";
+			echo "<li>Verhuurder " . $verhuurder . "</li>";
+			
+
+			echo "</ul></p>";
+
 			if ($dir = opendir($imgpath)) {
 
 			while (false !== ($image = readdir($dir))) {
 
 				if ($image != "." && $image != "..") {
 
-					echo "<img class=\"img-thumbnail tumb250px\" src=\"" . $imgpath . $image . "\">";
+					echo "<img class=\"tumb250px foto\" src=\"" . $imgpath . $image . "\">";
 				}
 			}
 
 			closedir($dir);
 			}	
+
+			
+
+			echo "<a class=\"btn btn-primary\" href=\"student_contact.php\" role=\"button\">Respond</a>";
+		
 
 	}
 	
@@ -116,29 +136,10 @@
     }
 ?>
 
+</div>
+</div>
 
 
-		    <section class="service-area section-gap" id="service">
-				<div class="container">
-					<div class="row no-flex">
-							<button class="buttonbck">Back</button>
-						<h1><?php echo $reistijd . "min, " . $plaatsnaam;?></h1>
-						<p class="infotext"> 
-							<ul>
-							<li>Traveling time 13min</li>
-							<li>Price 400,-</li>
-							<li>Square meters 39m2</li>
-							<li>Place Hoogezand</li>
-
-						</ul>
-					</p>
-						<img class="tumb250px foto" src="img/sk1.jpg">
-						<img class="tumb250px foto" src="img/sk2.jpg">
-						<img class="tumb250px foto" src="img/sk3.jpg">
-						<img class="tumb250px foto" src="img/sk4.jpg">
-							<button class="buttonreact">React</button>
-					</div>
-				</div>
 
 
 
