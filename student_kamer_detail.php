@@ -82,54 +82,30 @@
     // als er resultaten zijn dan resultaat in een associtievee array zetten
 
     if ($result->num_rows > 0) {
-        
         while($row = $result->fetch_assoc()) 
         {
             $currentstatus = $row['status'];
 
             // rows naar variabelen vertalen
-            
             $aanbodID = htmlspecialchars($row['ID']);
-                    
             $titel = htmlspecialchars($row['titel']);
-            
             $reistijd = htmlspecialchars($row['reistijd']);
-            
             $frequentie = htmlspecialchars($row['frequentie']);
-
             $oppervlakte = htmlspecialchars($row['oppervlakte']);
-            
             $voorzieningen = htmlspecialchars($row['voorzieningen']);
-
             $verhuurder = htmlspecialchars($row['verhuurder']);
-
             $plaatsnaam = htmlspecialchars($row['plaatsnaam']);
-            
-
 			$imgpath = "./img/aanbod/tumb/" . $aanbodID . "/";
-
-
-                    if ($dir = opendir($imgpath)) {
-
-                        while (false !== ($image = readdir($dir))) {
-
-                            if ($image != "." && $image != "..") {
-
-						
-
-								echo "<div class=\"row my-3 bg-light\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . " minuten tot de RUG</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul></div><div class=\"column mx-3\"><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
-
-
-
-                            }
-                         }
-            
-                closedir($dir);
-                    }
+				if ($dir = opendir($imgpath)) {
+					while (false !== ($image = readdir($dir))) {
+						if ($image != "." && $image != "..") {
+							echo "<div class=\"row my-3 bg-light\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . " minuten tot de RUG</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul></div><div class=\"column mx-3\"><a href=\"Student_contact.php" class=\"btn btn-primary float-right\">View</a></div></div>";
+						}
+					}
+				closedir($dir);
+			}
         }
-            
     }
-
 
     else {
 		echo "<h2 class=\"display-4\">Geen to-do items gevonden</h2>";
