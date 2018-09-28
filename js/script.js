@@ -7,7 +7,7 @@ $(window).on('load',function(){
             console.log(e.target.dataset.target);
             
             let target = e.target.dataset.target;
-            target === "student"? window.location.href = "http://google.com": window.location.href = "http://bing.com";
+            target === "student"? window.location.href = "#": window.location.href = "#";
         });
     });
 

@@ -41,7 +41,9 @@
 			<!-- Modal end -->
 
 			<!-- Start Header Area -->
-			<header class="default-header">
+			<?php include 'php/menu.php';?>
+			
+			<!-- <header class="default-header"> -->
 				<!-- <div class="menutop-wrap">
 					<div class="menu-top container">
 						<div class="d-flex justify-content-end align-items-center">
@@ -54,10 +56,10 @@
 					</div>					
 				</div> -->
 
-				<nav class="navbar navbar-expand-lg  navbar-light bg-light">
+				<!-- <nav class="navbar navbar-expand-lg  navbar-light bg-light">
 					<div class="container">
 						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="">
+						  	<img src="img/LogoSmall.png" alt="">
 						  </a>
 						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						    <span class="navbar-toggler-icon"></span>
@@ -75,7 +77,7 @@
 						  </div>						
 					</div>
 				</nav>
-			</header>
+			</header> -->
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
