@@ -178,7 +178,7 @@
 
 						
 
-								echo "<div class=\"row my-3\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . "</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
+								echo "<div class=\"row my-3\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . " minuten tot de RUG</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
 
 
 
@@ -198,17 +198,7 @@
     }
 ?>
             
-            <div class="card">
-                     <div class="card-body">
-                     <img src="img/s1.jpg" alt="..." class="img-thumbnail rounded float-left">
-                     <ul class="list-inline clearfix">
-                      <li class="list-inline-item card-title">Titel</li>
-                      <li class="list-inline-item card-text">Reistijd</li>
-                      <li class="list-inline-item card-text">Woonplaats</li>
-                     </ul>
-                     <a href="?id=1" class="btn btn-primary float-right">Bekijk</a>
-                    </div>
-            </div>
+
 
             <!-- <div class="card">
                     <div class="card-header">
