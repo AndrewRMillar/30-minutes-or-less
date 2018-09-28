@@ -14,7 +14,7 @@
 			<!-- meta character set -->
 			<meta charset="UTF-8">
 			<!-- Site Title -->
-			<title>Unit Details</title>
+			<title>30 Or Less Unit Details</title>
 
 			<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<link rel="stylesheet" href="css/linearicons.css">=
@@ -34,6 +34,7 @@
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
+
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
@@ -47,28 +48,7 @@
 				</div>
 			</section>
 
-		    <section class="service-area section-gap" id="service">
-				<div class="container">
-					<div class="row no-flex">
-							<button class="buttonbck">Back</button>
-						<h1>13min, Hoogezand</h1>
-						<p class="infotext"> 
-							<ul>
-							<li>Traveling time 13min</li>
-							<li>Price 400,-</li>
-							<li>Square meters 39m2</li>
-							<li>Place Hoogezand</li>
-
-						</ul>
-					</p>
-						<img class="tumb250px foto" src="img/sk1.jpg">
-						<img class="tumb250px foto" src="img/sk2.jpg">
-						<img class="tumb250px foto" src="img/sk3.jpg">
-						<img class="tumb250px foto" src="img/sk4.jpg">
-							<button class="buttonreact">React</button>
-					</div>
-				</div>
-				<?php
+<?php
     // aanbod ophalen
 
     // connectie maken
@@ -76,7 +56,10 @@
 
 	// sql query
 	$aanbodID = htmlspecialchars($_GET["id"]);
-    $sql = "SELECT * FROM aanbod WHERE ID = $id";
+	$sql = "SELECT * FROM aanbod WHERE ID = $aanbodID";
+	echo $sql;
+	echo "<br>";
+	echo $aanbodID;
     $result = $conn->query($sql);           
 
     // als er resultaten zijn dan resultaat in een associtievee array zetten
@@ -108,10 +91,31 @@
     }
 
     else {
-		echo "<h2 class=\"display-4\">Geen to-do items gevonden</h2>";
+		echo "<h2 class=\"display-4\">Er is iets fout gegaan.</h2>";
 		
     }
 ?>
+		    <section class="service-area section-gap" id="service">
+				<div class="container">
+					<div class="row no-flex">
+							<button class="buttonbck">Back</button>
+						<h1><?php echo $reistijd . "min, " . $plaatsnaam;?></h1>
+						<p class="infotext"> 
+							<ul>
+							<li>Traveling time 13min</li>
+							<li>Price 400,-</li>
+							<li>Square meters 39m2</li>
+							<li>Place Hoogezand</li>
+						</ul>
+					</p>
+						<img class="tumb250px foto" src="img/sk1.jpg">
+						<img class="tumb250px foto" src="img/sk2.jpg">
+						<img class="tumb250px foto" src="img/sk3.jpg">
+						<img class="tumb250px foto" src="img/sk4.jpg">
+							<button class="buttonreact">React</button>
+					</div>
+				</div>
+
 
 
 			</section>
