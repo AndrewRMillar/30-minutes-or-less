@@ -30,33 +30,7 @@
 
 			<!-- Start Header Area -->
 			<?php include 'php/menu.php';?>
-<<<<<<< HEAD:student-zoeken.php
 
-=======
-			<!-- <header class="default-header">
-				<nav class="navbar navbar-expand-lg  navbar-light bg-light">
-					<div class="container">
-						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/LogoSmall.png" alt="">
-						  </a>
-						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="navbar-toggler-icon"></span>
-						  </button>
-
-						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-								<li><a href="#home">Home</a></li>
-								<li><a href="#service">Service</a></li>
-								<li><a href="#property">Property</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-						    </ul>
-						  </div>						
-					</div>
-				</nav>
-			</header> -->
->>>>>>> 75e1f28e166606a98dc2ac2ab6a25db8d568c1e8:student-zoeken.html
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
@@ -76,26 +50,10 @@
 												<div class="col">
 													<h4 class="search-title">Search for Accomodation</h4>
 												</div>
-												<!-- <div class="col">
-													<div class="onoffswitch3 d-block mx-auto">
-													    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
-													    <label class="onoffswitch3-label" for="myonoffswitch3">
-													        <span class="onoffswitch3-inner">
-													            <span class="onoffswitch3-active">
-													            	<span class="onoffswitch3-switch">Sell</span>
-													            	<span class="lnr lnr-arrow-right"></span>
-													            </span>
-													            <span class="onoffswitch3-inactive">
-													            	<span class="lnr lnr-arrow-left"></span>
-													            	<span class="onoffswitch3-switch">Rent</span>
-													            </span>
-													        </span>
-													    </label>
-													</div>													
-												</div> -->
+
 											</div>
 									 	</div>
-									    <div class="offset-md-3 col-lg-6"> <!--  col-md-6 col-xs-6 --->
+									    <div class="offset-md-3 col-lg-6">
 											<select name="travel time" class="app-select form-control" required>
 												<option data-display="travel time">15 min</option>
 												<option value="1">20 min</option>
@@ -108,7 +66,8 @@
 									    	<input type="text" id="range" value="" name="range" />
 									    </div>	
 									    <div class="col-lg-6 d-flex justify-content-end">
-											<button class="primary-btn mt-50" style="height: 45px;">Zoek<span class="lnr lnr-arrow-right"></span></button>
+											<!-- dit is bewust niet werkend gemaakt ivm tijd. Hij verwijst nu naar de pagina met een link ipv echt iets door te sturen -->
+											<a class="btn btn-primary" href="student_zoek_resultaat.php" role="button">Search</a>
 										</div>						  
 									  </div>
 							  	</form>
@@ -155,267 +114,7 @@
 			</section>
 			<!-- End service Area -->
 
-			<!-- Start property Area -->
-			<!-- <section class="property-area section-gap relative" id="property">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-40 header-text">
-							<h1>Our Top Rated Properties</h1>
-							<p>
-								Who are in extremely love with eco friendly system.
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s2	.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s3.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>																											
-					</div>
-				</div>	
-			</section> -->
-			<!-- End property Area -->	
-				
-			<!-- Start city Area -->
-			<!-- <section class="city-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 mb-10">
-						  <div class="content">
-						    <a href="#" target="_blank">
-						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/p1.jpg" alt="">
-						      <div class="content-details fadeIn-bottom">
-						        <h3 class="content-title">San Fransisco Properties</h3>
-						      </div>
-						    </a>
-						  </div>
-						</div>
-						<div class="col-lg-8 col-md-8 mb-10">
-							<div class="content">
-							    <a href="#" target="_blank">
-							      <div class="content-overlay"></div>
-							  		 <img class="content-image img-fluid d-block mx-auto" src="img/p2.jpg" alt="">
-							      <div class="content-details fadeIn-bottom">
-							        <h3 class="content-title">New York Properties</h3>
-							      </div>
-							    </a>
-						  	</div>
-							<div class="row city-bottom">
-								<div class="col-lg-6 col-md-6 mt-30">
-									<div class="content">
-									    <a href="#" target="_blank">
-									      <div class="content-overlay"></div>
-									  		 <img class="content-image img-fluid d-block mx-auto" src="img/p3.jpg" alt="">
-									      <div class="content-details fadeIn-bottom">
-									        <h3 class="content-title">Boston Properties</h3>
-									      </div>
-									    </a>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 mt-30">
-									<div class="content">
-									    <a href="#" target="_blank">
-									      <div class="content-overlay"></div>
-									  		 <img class="content-image img-fluid d-block mx-auto" src="img/p4.jpg" alt="">
-									      <div class="content-details fadeIn-bottom">
-									        <h3 class="content-title">Elay Properties</h3>
-									      </div>
-									    </a>
-									</div>
-								</div>								
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section> -->
-			<!-- End city Area -->
 
-			<!-- Start About Area -->
-			<!-- <section class="about-area">
-				<div class="container-fluid">
-					<div class="row d-flex justify-content-end align-items-center">
-						<div class="col-lg-6 about-left">
-							<div class="single-about pb-30">
-								<h4>Why Choose Us</h4>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-								</p>
-							</div>
-							<div class="single-about pb-30">
-								<h4>Our Properties</h4>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-								</p>
-							</div>
-							<div class="single-about">
-								<h4>legal notice</h4>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-								</p>
-							</div>																
-						</div>			
-						<div class="col-lg-6 about-right no-padding">
-							<img class="img-fluid" src="img/about-img.jpg" alt="">
-						</div>			
-					</div>
-				</div>	
-			</section>
-			<!-- End About Area -->		 -->
-		
-			<!-- Start contact-info Area -->
-			<!-- <section class="contact-info-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Visit Our Office</h4>
-							 <p>
-							 	56/8, bir uttam qazi nuruzzaman 
-							 	road, west panthapath, kalabagan, 
-							 	Dhanmondi, Dhaka - 1205
-							 </p>                                   
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Let’s call us</h4>
-							 <p>
-								Phone 01: 012-6532-568-9746 <br>
-								Phone 02: 012-6532-568-9748 <br>
-								FAX: 02-6532-568-746
-							 </p>                                   
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Let’s Email Us</h4>
-							 <p>
-								hello@colorlib.com <br>
-								mainhelpinfo@colorlib.com <br>
-								infohelp@colorlib.com
-							 </p>                                   
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Customer Support</h4>
-							 <p>
-							 	support@colorlib.com <br>
-								emergencysupp@colorlib.com <br>
-								extremesupp@colorlib.com
-							 </p>                                   
-						</div>																		
-					</div>
-				</div>	
-			</section> -->
-			<!-- End contact-info Area -->
-
-			<!-- Start Contact Area -->
-			<!-- <section class="contact-area" id="contact">
-				<div class="container-fluid">
-					<div class="row align-items-center d-flex justify-content-start">
-						<div class="col-lg-6 col-md-12 contact-left no-padding">
-	      					<div style=" width:100%;
-	                height: 545px;" id="map"></div>
-						</div>
-						<div class="col-lg-4 col-md-12 pt-100 pb-100">
-							<form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
-								<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
-								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
-								<textarea class="common-textarea mt-10" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-								<button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
-								<div class="alert-msg">
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<!-- End Contact Area -->	
 
 			<!-- start footer Area -->		
 						<!-- start footer Area -->		
