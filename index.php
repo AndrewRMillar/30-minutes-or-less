@@ -6,7 +6,7 @@
 			<!-- Favicon-->
 			<link rel="shortcut icon" href="img/fav.png">
 			<!-- Author Meta -->
-			<meta name="Edwin Dijkstra" content="">
+			<meta name="author" content="CodePixar">
 			<!-- Meta Description -->
 			<meta name="description" content="">
 			<!-- Meta Keyword -->
@@ -14,21 +14,36 @@
 			<!-- meta character set -->
 			<meta charset="UTF-8">
 			<!-- Site Title -->
-			<title>Student Room Search Result</title>
+			<title>Real Estate</title>
 
 			<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<link rel="stylesheet" href="css/linearicons.css">=
+			<link rel="stylesheet" href="css/linearicons.css">	
 			<link rel="stylesheet" href="css/font-awesome.min.css">
 			<link rel="stylesheet" href="css/nice-select.css">
 			<link rel="stylesheet" href="css/ion.rangeSlider.css" />
 			<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/style.css">
 		</head>
 		<body>
+			<!-- Modal html begin -->
+			<div class="modal fade" id="userSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary target" data-target="student" data-dismiss="modal">Student</button>
+							<button type="button" class="btn btn-primary target" data-target="landlord" data-dismiss="modal">Landlord</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal end -->
 
 			<!-- Start Header Area -->
-			<header class="default-header">
+			<?php include 'php/menu.php';?>
+			
+			<!-- <header class="default-header"> -->
 				<!-- <div class="menutop-wrap">
 					<div class="menu-top container">
 						<div class="d-flex justify-content-end align-items-center">
@@ -41,10 +56,10 @@
 					</div>					
 				</div> -->
 
-				<nav class="navbar navbar-expand-lg  navbar-light bg-light">
+				<!-- <nav class="navbar navbar-expand-lg  navbar-light bg-light">
 					<div class="container">
 						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="">
+						  	<img src="img/LogoLarge.png" alt="">
 						  </a>
 						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						    <span class="navbar-toggler-icon"></span>
@@ -62,7 +77,7 @@
 						  </div>						
 					</div>
 				</nav>
-			</header>
+			</header> -->
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
@@ -70,14 +85,14 @@
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row fullscreen align-items-center justify-content-center" style="height: 915px;">
-						<!-- <div class="banner-content col-lg-12 col-md-12">
+						<div class="banner-content col-lg-12 col-md-12">
 							<h1 class="text-uppercase">
 								30 minutes or less
 							</h1>
 							<div class="search-field">
 								<form class="search-form" action="#">
 									 <div class="row">
-									 	<div class="col-lg-12 d-flex align-items-center justify-content-center toggle-wrap">
+									 	<!-- <div class="col-lg-12 d-flex align-items-center justify-content-center toggle-wrap">
 											<div class="row">
 												<div class="col">
 													<h4 class="search-title">Search Properties For</h4>
@@ -100,7 +115,7 @@
 													</div>													
 												</div>
 											</div>
-									 	</div>
+									 	</div> -->
 									    <div class="col-lg-3 col-md-6 col-xs-6">
 											<select name="lorem ipsum" class="app-select form-control" required>
 												<option data-display="lorem ipsum">lorem ipsum</option>
@@ -147,45 +162,13 @@
 									  </div>
 							  	</form>
 							</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</section>
 			<!-- End banner Area -->
 
 			<!-- Start service Area -->
-
-			<!-- <div>
-				<h1>Header 1</h1>
-				<p>Hallo dit is content</p>		
-			
-			</div> -->
-            
-            <div class="card">
-                     <div class="card-body">
-                     <img src="img/s1.jpg" alt="..." class="img-thumbnail rounded float-left">
-                     <ul class="list-inline clearfix">
-                      <li class="list-inline-item card-title">Titel</li>
-                      <li class="list-inline-item card-text">Reistijd</li>
-                      <li class="list-inline-item card-text">Woonplaats</li>
-                     </ul>
-                     <a href="?id=1" class="btn btn-primary float-right">Bekijk</a>
-                    </div>
-            </div>
-
-            <!-- <div class="card">
-                    <div class="card-header">
-                      Quote
-                    </div>
-                    <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                      </blockquote>
-                    </div>
-            </div> -->
-
-
 			<!-- <section class="service-area section-gap" id="service">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
@@ -524,48 +507,14 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-lg-3  col-md-6 col-sm-6">
+						<!-- <div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-
-										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-
-										<div class="d-flex flex-row">
-
-											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-				                            	<div style="position: absolute; left: -5000px;">
-													<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-												</div>
-				                          	
-											<!-- <div class="col-lg-4 col-md-4">
-												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-											</div>  -->
-										</div>		
-										<div class="info"></div>
-										</form>
-								</div>
-								</div>
+                            </div>
 						</div>						
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget mail-chimp">
-								<h6 class="mb-20">Instragram Feed</h6>
-								<ul class="instafeed d-flex flex-wrap">
-									<li><img src="img/i1.jpg" alt=""></li>
-									<li><img src="img/i2.jpg" alt=""></li>
-									<li><img src="img/i3.jpg" alt=""></li>
-									<li><img src="img/i4.jpg" alt=""></li>
-									<li><img src="img/i5.jpg" alt=""></li>
-									<li><img src="img/i6.jpg" alt=""></li>
-									<li><img src="img/i7.jpg" alt=""></li>
-									<li><img src="img/i8.jpg" alt=""></li>
-								</ul>
 							</div>
-						</div>
+						</div> -->
 						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h6>Follow Us</h6>
@@ -598,6 +547,7 @@
 			<script src="js/ion.rangeSlider.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script src="js/jquery.magnific-popup.min.js"></script>
-			<script src="js/main.js"></script>	
+			<script src="js/main.js"></script>
+			<script src="js/script.js"></script>	
 		</body>
 	</html>
