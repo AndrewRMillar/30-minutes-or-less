@@ -34,6 +34,9 @@
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
+
+
+
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
@@ -47,28 +50,7 @@
 				</div>
 			</section>
 
-		    <section class="service-area section-gap" id="service">
-				<div class="container">
-					<div class="row no-flex">
-							<button class="buttonbck">Back</button>
-						<h1>13min, Hoogezand</h1>
-						<p class="infotext"> 
-							<ul>
-							<li>Traveling time 13min</li>
-							<li>Price 400,-</li>
-							<li>Square meters 39m2</li>
-							<li>Place Hoogezand</li>
-
-						</ul>
-					</p>
-						<img class="tumb250px foto" src="img/sk1.jpg">
-						<img class="tumb250px foto" src="img/sk2.jpg">
-						<img class="tumb250px foto" src="img/sk3.jpg">
-						<img class="tumb250px foto" src="img/sk4.jpg">
-							<button class="buttonreact">React</button>
-					</div>
-				</div>
-				<?php
+<?php
     // aanbod ophalen
 
     // connectie maken
@@ -76,7 +58,10 @@
 
 	// sql query
 	$aanbodID = htmlspecialchars($_GET["id"]);
-    $sql = "SELECT * FROM aanbod WHERE ID = $id";
+	$sql = "SELECT * FROM aanbod WHERE ID = $aanbodID";
+	echo $sql;
+	echo "<br>";
+	echo $aanbodID;
     $result = $conn->query($sql);           
 
     // als er resultaten zijn dan resultaat in een associtievee array zetten
@@ -104,38 +89,57 @@
             $verhuurder = htmlspecialchars($row['verhuurder']);
 
             $plaatsnaam = htmlspecialchars($row['plaatsnaam']);
-            
+			
+			$imgpath = "./img/aanbod/" . $aanbodID . "/";
 
-			$imgpath = "./img/aanbod/tumb/" . $aanbodID . "/";
+			if ($dir = opendir($imgpath)) {
 
+			while (false !== ($image = readdir($dir))) {
 
-                    if ($dir = opendir($imgpath)) {
+				if ($image != "." && $image != "..") {
 
-                        while (false !== ($image = readdir($dir))) {
+					echo "<img class=\"img-thumbnail tumb250px\" src=\"" . $imgpath . $image . "\">";
+				}
+			}
 
-                            if ($image != "." && $image != "..") {
+			closedir($dir);
+			}	
 
-						
-
-								echo "<div class=\"row my-3 bg-light\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . " minuten tot de RUG</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul></div><div class=\"column mx-3\"><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
-
-
-
-                            }
-                         }
-            
-                closedir($dir);
-                    }
-        }
-            
-    }
+	}
+	
+}
 
 
     else {
-		echo "<h2 class=\"display-4\">Geen to-do items gevonden</h2>";
+		echo "<h2 class=\"display-4\">Er is iets fout gegaan.</h2>";
 		
     }
 ?>
+
+
+
+		    <section class="service-area section-gap" id="service">
+				<div class="container">
+					<div class="row no-flex">
+							<button class="buttonbck">Back</button>
+						<h1><?php echo $reistijd . "min, " . $plaatsnaam;?></h1>
+						<p class="infotext"> 
+							<ul>
+							<li>Traveling time 13min</li>
+							<li>Price 400,-</li>
+							<li>Square meters 39m2</li>
+							<li>Place Hoogezand</li>
+
+						</ul>
+					</p>
+						<img class="tumb250px foto" src="img/sk1.jpg">
+						<img class="tumb250px foto" src="img/sk2.jpg">
+						<img class="tumb250px foto" src="img/sk3.jpg">
+						<img class="tumb250px foto" src="img/sk4.jpg">
+							<button class="buttonreact">React</button>
+					</div>
+				</div>
+
 
 
 			</section>
