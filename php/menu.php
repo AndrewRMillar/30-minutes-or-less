@@ -10,8 +10,8 @@
 
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav">
-								<li><a href="#">30orLess</a></li>
-								<li><a href="#">Profile</a></li>
+								<li><a href="index.php">30orLess</a></li>
+								<li><a href="student-zoeken.php">Search rooms</a></li>
 								<li><a href="#">About</a></li>
 								<li><a href="#">Logout</a></li>
 						    </ul>
