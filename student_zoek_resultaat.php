@@ -24,51 +24,12 @@
 			<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/style.css">			
 		</head>
 		<body>
 
-
-
-			<?php include 'php/menu.php';?>
-			
-
-
 			<!-- Start Header Area -->
-			<!-- <header class="default-header"> -->
-				<!-- <div class="menutop-wrap">
-					<div class="menu-top container">
-						<div class="d-flex justify-content-end align-items-center">
-							<ul class="list">
-								<li><a href="tel:+12312-3-1209">+12312-3-1209</a></li>
-								<li><a href="#">Sell / Rent Property</a></li>
-								<li><a href="#">login / register</a></li>
-							</ul>
-						</div>
-					</div>					
-				</div> -->
-
-				<!-- <nav class="navbar navbar-expand-lg  navbar-light bg-light">
-					<div class="container">
-						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/logo.png" alt="">
-						  </a>
-						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="navbar-toggler-icon"></span>
-						  </button>
-
-						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-								<li><a href="#home">Home</a></li>
-								<li><a href="#service">Service</a></li>
-								<li><a href="#property">Property</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-						    </ul>
-						  </div>						
-					</div>
-				</nav>
-			</header> -->
+			<?php include 'php/menu.php';?>
 			<!-- End Header Area -->
 
 			<!-- start banner Area -->
@@ -167,7 +128,75 @@
 			
 			</div> -->
 
-			<!--- Zoekresulaten laten zien -->
+
+
+			<?php
+    // aanbod ophalen
+
+    // connectie maken
+    require 'db_connect.php';
+
+    // sql query
+    $sql = "SELECT * FROM aanbod";
+    $result = $conn->query($sql);           
+
+    // als er resultaten zijn dan resultaat in een associtievee array zetten
+
+    if ($result->num_rows > 0) {
+        
+        while($row = $result->fetch_assoc()) 
+        {
+            $currentstatus = $row['status'];
+
+            // rows naar variabelen vertalen
+            
+            $aanbodID = htmlspecialchars($row['ID']);
+                    
+            $titel = htmlspecialchars($row['titel']);
+            
+            $reistijd = htmlspecialchars($row['reistijd']);
+            
+            $frequentie = htmlspecialchars($row['frequentie']);
+
+            $oppervlakte = htmlspecialchars($row['oppervlakte']);
+            
+            $voorzieningen = htmlspecialchars($row['voorzieningen']);
+
+            $verhuurder = htmlspecialchars($row['verhuurder']);
+
+            $plaatsnaam = htmlspecialchars($row['plaatsnaam']);
+            
+
+			$imgpath = "./img/aanbod/tumb/" . $aanbodID . "/";
+
+
+                    if ($dir = opendir($imgpath)) {
+
+                        while (false !== ($image = readdir($dir))) {
+
+                            if ($image != "." && $image != "..") {
+
+						
+
+								echo "<div class=\"row my-3\"><div class=\"column mx-3\"><img class=\"img-thumbnail tumb250px mx-3\" src=\"" . $imgpath . $image . "\" ></div><div class=\"col-6 mx-3\"><ul class=\"list-group clearfix\"><li class=\"list-group-item card-title\">" . $titel . "</li><li class=\"list-group-item card-text\">" . $reistijd . "</li><li class=\"list-group-item card-text\">" . $plaatsnaam . "</li></ul><a href=\"?id=1\" class=\"btn btn-primary float-right\">Bekijk</a></div></div>";
+
+
+
+                            }
+                         }
+            
+                closedir($dir);
+                    }
+        }
+            
+    }
+
+
+    else {
+		echo "<h2 class=\"display-4\">Geen to-do items gevonden</h2>";
+		
+    }
+?>
             
             <div class="card">
                      <div class="card-body">
