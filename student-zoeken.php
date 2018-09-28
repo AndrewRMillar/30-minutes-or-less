@@ -67,7 +67,7 @@
 									    </div>	
 									    <div class="col-lg-6 d-flex justify-content-end">
 											<!-- dit is bewust niet werkend gemaakt ivm tijd. Hij verwijst nu naar de pagina met een link ipv echt iets door te sturen -->
-											<a class="btn btn-primary" href="student_kamer_detail.php?id=2" role="button">Search</a>
+											<a class="btn btn-primary" href="student_zoek_resultaat.php" role="button">Search</a>
 										</div>						  
 									  </div>
 							  	</form>
@@ -80,38 +80,26 @@
 
 			<!-- Start service Area -->
 			<section class="service-area section-gap" id="service">
-				<div class="container"> 
+				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-40 header-text">
-							<h1>Who are we</h1>
+							<h1>30 or Less</h1>
+							<p>
+								30 Or Less is a student housing mediator, 
+								aiming to facilitate living space for international students who attend college in the lovely city of Groningen.<br>
+								<br>
+								We provide a wide choice of student housing located around Groningen city, 
+								with a travel time of 30 minutes or less.<br>
+								Availability and afforability are our big advantages.<br>
+								<br>
+								For students who are not yet familiar with the area,<br> 
+								we provide a way of finding a place to live that holds up to the standards you are looking for, when arriving in another country.<br>
+
+							</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-6 pb-30">
-							<div class="single-service">
-								<h4><span class="lnr lnr-user"></span>Expert Technicians</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-service">
-								<h4><span class="lnr lnr-phone"></span>Great Support</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>								
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>				
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
+			</div>
+			</section> 
 			<!-- End service Area -->
 
 
